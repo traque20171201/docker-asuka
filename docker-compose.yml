@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  asuka-service:
+    image: nginx
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d
+      - ./html:/usr/share/nginx/html
+    ports:
+      - 8080:80

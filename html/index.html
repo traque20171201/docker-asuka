@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="vi">
+<head>
+	<title>Asuka</title>
+	<script charset="UTF-8" type="text/javascript" src="https://stage-travel.fraudprevention.jp/js/stage-aerosmith.js?accountId=TestAirtripOverseasticket&pageId=page1&verbose=true"></script>
+	<script>
+		function pass(reason) {
+			alert(reason);
+			//alert("Check OK!! Next to confirm screen.");
+		}
+		function fail(reason) {
+			alert(reason);
+			//alert("Check NG!! Stop transaction...");
+		}
+	</script>
+</head>
+<body onload="">
+	<div id="Main">
+		<h1>Using Asuka for check card</h1>
+		<!--<form action="" id="requestForm" onsubmit="return false;" method="post">-->
+			<table>
+				<tr>
+					<th>Email:</th>
+					<td><input type="text" id="email" name="mailAddress" maxlength="50" size="50" /></td>
+				</tr>
+				<tr>
+					<th>CardNo:</th>
+					<td><input type="text" id="cardNo" name="cardNumber" maxlength="16" size="20" /></td>
+				</tr>
+				<tr>
+					<th>National:</th>
+					<td>
+						<select name="nationality">
+							<option value="VN">Vietnam</option>
+							<option value="JP">Japan</option>
+							<option value="UK">United Kingdom</option>
+							<option value="US">United States</option>
+							<option value="KR">Korea</option>
+							<option value="">(None)</option>
+						</select>
+					</td>
+				</tr>
+			</table>
+		<!--</form>-->
+		<div>
+			<a href="javascript:void(0);" onclick="aerosmith.checkScore(function(reason) {pass(reason);}, function(reason) {fail(reason);});">Check</a>
+		</div>
+	</div>
+</body>
+</html>
